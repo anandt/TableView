@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2Pk-fR-1qP">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Avengers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VMK-NG-xLT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="624.63768115942037" y="-22.098214285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7ct-aj-mnA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2Pk-fR-1qP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xwm-7L-AwL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="tmq-Cf-YwD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cnO-U6-G2C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-285.50724637681162" y="-22.098214285714285"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="2Rz-z7-JH9">
+            <objects>
+                <viewController storyboardIdentifier="DetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="kXn-RW-K2a" customClass="DetailsViewController" customModule="Avengers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lfI-Dv-Tv4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MFf-Ox-fkc">
+                                <rect key="frame" x="10" y="64" width="394" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="k5R-q7-A9H"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aPX-qs-gGM" customClass="StarRatingView" customModule="Avengers" customModuleProvider="target">
+                                <rect key="frame" x="20" y="372" width="369" height="80"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="CQD-Ju-aSi"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VK3-pV-vIP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MFf-Ox-fkc" firstAttribute="leading" secondItem="VK3-pV-vIP" secondAttribute="leading" constant="10" id="21R-Ia-0Li"/>
+                            <constraint firstItem="MFf-Ox-fkc" firstAttribute="centerX" secondItem="lfI-Dv-Tv4" secondAttribute="centerX" id="49p-Fh-NeQ"/>
+                            <constraint firstItem="VK3-pV-vIP" firstAttribute="trailing" secondItem="aPX-qs-gGM" secondAttribute="trailing" constant="25" id="Cfc-wj-Crf"/>
+                            <constraint firstItem="aPX-qs-gGM" firstAttribute="leading" secondItem="lfI-Dv-Tv4" secondAttribute="leadingMargin" id="jSE-Pl-Ch8"/>
+                            <constraint firstItem="VK3-pV-vIP" firstAttribute="trailing" secondItem="MFf-Ox-fkc" secondAttribute="trailing" constant="10" id="oD5-fg-YcE"/>
+                            <constraint firstItem="MFf-Ox-fkc" firstAttribute="top" secondItem="VK3-pV-vIP" secondAttribute="top" constant="20" id="wPu-eu-UHy"/>
+                            <constraint firstItem="aPX-qs-gGM" firstAttribute="top" secondItem="MFf-Ox-fkc" secondAttribute="bottom" constant="8" id="z9Z-Q8-AXL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ke9-RK-cEb"/>
+                    <connections>
+                        <outlet property="profileImage" destination="MFf-Ox-fkc" id="Aa8-A8-INf"/>
+                        <outlet property="starView" destination="aPX-qs-gGM" id="Bhi-u3-cLa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GJl-au-CH3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1402.8985507246377" y="-22.098214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
